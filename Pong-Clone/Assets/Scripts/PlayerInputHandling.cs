@@ -16,7 +16,7 @@ public class PlayerInputHandling : MonoBehaviour
     {
         // range to clamp is 4.15 to -4.15
 
-        if(transform.position.y < 4.15f && Input.GetKey(KeyCode.W))
+        if(transform.position.y < 3.45f && Input.GetKey(KeyCode.W))
         {
             transform.position += Vector3.up * moveSpeed * Time.deltaTime;
         }

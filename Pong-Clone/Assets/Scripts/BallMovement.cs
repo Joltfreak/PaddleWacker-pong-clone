@@ -53,4 +53,10 @@ public class BallMovement : MonoBehaviour
             print("Hit Wall");
         }
     }
+
+    
+    public void ResetDirection()
+    {
+        currentDirection = -transform.right;
+    }
 }
