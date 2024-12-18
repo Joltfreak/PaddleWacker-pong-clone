@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BallMovement : MonoBehaviour
 {
-    [SerializeField] float ballMoveSpeed = 5f;
+    public float ballMoveSpeed = 5f;
     private Vector3 currentDirection;
     private float randomOffset;
 
@@ -51,6 +51,16 @@ public class BallMovement : MonoBehaviour
         {
             currentDirection.y = -currentDirection.y;
             print("Hit Wall");
+        }
+
+        if(collision.gameObject.CompareTag("ObstacleX"))
+        {
+            currentDirection.x = -currentDirection.x;
+        }
+
+        if(collision.gameObject.CompareTag("ObstacleY"))
+        {
+            currentDirection.y = -currentDirection.y;
         }
     }
 

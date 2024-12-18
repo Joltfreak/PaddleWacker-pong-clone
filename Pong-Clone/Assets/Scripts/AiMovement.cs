@@ -9,7 +9,6 @@ public class AiMovement : MonoBehaviour
     void Update()
     {
         movePaddle();
-        print(TargetPosition);
         GameObject ball = GameObject.Find("Ball");
         if(ball != null)
         {

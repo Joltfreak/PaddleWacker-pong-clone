@@ -8,10 +8,12 @@ public class ScoreHandling : MonoBehaviour
     public int ai_score = 0;
 
     SpawnBall spawnBall;
+    BallMovement ballMovement;
 
     private void Start() 
     {
         spawnBall = FindObjectOfType<SpawnBall>();
+        ballMovement = FindObjectOfType<BallMovement>();
     }
 
     private void Update() 
@@ -25,16 +27,14 @@ public class ScoreHandling : MonoBehaviour
         if(other.gameObject.tag == "PlayerPointZone")
         {
             ai_score++;
+            ballMovement.ballMoveSpeed = 5f;
             spawnBall.StartCoroutine(spawnBall.spawnBall());
-            //Destroy(gameObject);
-            // start function to reset ball position
         }
         else if(other.gameObject.tag == "AiPointZone")
         {
             player_score++;
+            ballMovement.ballMoveSpeed = 5f;
             spawnBall.StartCoroutine(spawnBall.spawnBall());
-            //Destroy(gameObject);
-            // start function to reset ball position
         }
     }
 }
