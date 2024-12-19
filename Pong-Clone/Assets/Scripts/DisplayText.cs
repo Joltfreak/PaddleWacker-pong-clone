@@ -24,7 +24,7 @@ public class DisplayText : MonoBehaviour
         }
         else
         {
-            aiScoredText.text = "AI Wins!";
+            aiScoredText.text = "  AI Wins!";
         }
     }
 

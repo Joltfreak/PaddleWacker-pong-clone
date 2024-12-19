@@ -1018,7 +1018,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -32.3, y: 302.83}
+  m_AnchoredPosition: {x: -32.299984, y: 302.82996}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &670492232
@@ -2856,9 +2856,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2779496769968405738, guid: 30648c7d97f075543ac6666350cb9645, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.014
+      objectReference: {fileID: 0}
+    - target: {fileID: 3419045819748629613, guid: 30648c7d97f075543ac6666350cb9645, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.9952967
+      objectReference: {fileID: 0}
+    - target: {fileID: 3419045819748629613, guid: 30648c7d97f075543ac6666350cb9645, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0116
+      objectReference: {fileID: 0}
     - target: {fileID: 4353658203920558376, guid: 30648c7d97f075543ac6666350cb9645, type: 3}
       propertyPath: m_Name
       value: SquareObstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 7538777950566589636, guid: 30648c7d97f075543ac6666350cb9645, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.013
+      objectReference: {fileID: 0}
+    - target: {fileID: 8937489958229688788, guid: 30648c7d97f075543ac6666350cb9645, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.013
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
