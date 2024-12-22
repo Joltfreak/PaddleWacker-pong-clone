@@ -5,10 +5,13 @@ public class BallMovement : MonoBehaviour
     public float ballMoveSpeed = 5f;
     private Vector3 currentDirection;
     private float randomOffset;
+    private AudioSource audioSource;
+    [SerializeField] AudioClip hitsound;
 
     private void Start() 
     {
         currentDirection = -transform.right;
+        audioSource = this.gameObject.GetComponent<AudioSource>();
     }
 
     void Update()
@@ -35,12 +38,14 @@ public class BallMovement : MonoBehaviour
                 print("Hit higher");
                 //randomOffset = Random.Range(0, 20);
                 reflection.y += 0.5f;
+                playSound();
             }
             else if(positionHit.y < paddlesPos.y)
             {
                 print("Hit lower");
                 //randomOffset = Random.Range(0, 20);
                 reflection.y -= 0.5f;
+                playSound();
             }
             ballMoveSpeed += 0.5f;
             currentDirection = reflection.normalized;
@@ -50,21 +55,28 @@ public class BallMovement : MonoBehaviour
         if(collision.gameObject.CompareTag("Wall"))
         {
             currentDirection.y = -currentDirection.y;
-            print("Hit Wall");
+            playSound();
         }
 
         if(collision.gameObject.CompareTag("ObstacleX"))
         {
             currentDirection.x = -currentDirection.x;
+            playSound();
         }
 
         if(collision.gameObject.CompareTag("ObstacleY"))
         {
             currentDirection.y = -currentDirection.y;
+            playSound();
         }
     }
 
-    
+    void playSound()
+    {
+        audioSource.PlayOneShot(hitsound);
+        audioSource.volume = Random.Range(0.5f, 1f);
+        audioSource.pitch = Random.Range(0.85f, 1f);
+    }
     public void ResetDirection()
     {
         currentDirection = -transform.right;

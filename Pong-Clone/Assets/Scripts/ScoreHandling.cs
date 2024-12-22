@@ -11,11 +11,15 @@ public class ScoreHandling : MonoBehaviour
     SpawnBall spawnBall;
     BallMovement ballMovement;
 
+    AudioSource audioSource;
+    [SerializeField] AudioClip scoreSound;
+
     private void Start() 
     {
         displayText = FindObjectOfType<DisplayText>();
         spawnBall = FindObjectOfType<SpawnBall>();
         ballMovement = FindObjectOfType<BallMovement>();
+        audioSource = this.gameObject.GetComponent<AudioSource>();
     }
 
     private void Update() 
@@ -30,6 +34,7 @@ public class ScoreHandling : MonoBehaviour
         {
             ai_score++;
             ballMovement.ballMoveSpeed = 5f;
+            playScoreSound();
             if(ai_score == 5 || player_score == 5)
             {
                 displayText.DisplayEndGameText();
@@ -44,6 +49,7 @@ public class ScoreHandling : MonoBehaviour
         {
             player_score++;
             ballMovement.ballMoveSpeed = 5f;
+            playScoreSound();
             if(ai_score == 5 || player_score == 5)
             {
                 displayText.DisplayEndGameText();
@@ -54,5 +60,10 @@ public class ScoreHandling : MonoBehaviour
                 spawnBall.StartCoroutine(spawnBall.spawnBall());
             }   
         }
+    }
+
+    void playScoreSound()
+    {
+        audioSource.PlayOneShot(scoreSound);
     }
 }
