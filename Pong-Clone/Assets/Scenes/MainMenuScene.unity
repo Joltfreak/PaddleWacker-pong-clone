@@ -1011,8 +1011,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 54
+  m_fontSizeBase: 54
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1543,19 +1543,26 @@ MonoBehaviour:
   m_text: '
 
 
-    - basic pong rules
-
     - choose between player
 
-    vs AI or player
-    vs player
+    vs AI or player vs player
 
-    - bounce the ball around
+    - bounce
+    the ball around
 
     and score points.
 
-    - First to
-    5 points wins'
+    - First to 5 points wins
+
+    - Left
+    player uses
+
+    w and D to move and
+
+    right player uses up and
+
+    down
+    arrows on keyboard'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 05a3078a4f4a07a43a88f2a874216b41, type: 2}
   m_sharedMaterial: {fileID: -7237596204644106377, guid: 05a3078a4f4a07a43a88f2a874216b41, type: 2}
@@ -1582,8 +1589,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
