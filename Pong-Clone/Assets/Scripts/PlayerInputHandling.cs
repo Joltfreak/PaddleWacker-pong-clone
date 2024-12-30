@@ -1,11 +1,21 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerInputHandling : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 5f;
     [SerializeField] bool isPlayerOne;
+    [SerializeField] GameObject PauseMenu;
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip audioClip;
 
     // Update is called once per frame
+
+    private void Start()
+    {
+        PauseMenu.SetActive(false);
+    }
+
     void Update()
     {
         if(isPlayerOne)
@@ -16,6 +26,32 @@ public class PlayerInputHandling : MonoBehaviour
         {
             handlePlayer2Movement();
         }
+
+        handlePauseMenu();
+    }
+
+    void handlePauseMenu()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            audioSource.PlayOneShot(audioClip);
+            PauseMenu.SetActive(true);
+            Time.timeScale = 0;
+        }
+    }
+
+    public void ResumeGame()
+    {
+        PauseMenu.SetActive(false);
+        Time.timeScale = 1;
+
+        audioSource.PlayOneShot(audioClip);
+    }
+
+    public void QuitGame()
+    {
+        SceneManager.LoadScene(0);
+        audioSource.PlayOneShot(audioClip);
     }
 
     void handlePlayer1Movement()
