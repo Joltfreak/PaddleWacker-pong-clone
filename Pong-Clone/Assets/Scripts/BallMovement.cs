@@ -7,6 +7,7 @@ public class BallMovement : MonoBehaviour
     private float randomOffset;
     private AudioSource audioSource;
     [SerializeField] AudioClip hitsound;
+    [SerializeField] Rigidbody2D rb;
 
     private void Start() 
     {
@@ -21,7 +22,8 @@ public class BallMovement : MonoBehaviour
 
     void MoveBall(Vector3 direction)
     {
-        transform.position += direction.normalized * ballMoveSpeed * Time.deltaTime;
+        //transform.position += direction.normalized * ballMoveSpeed * Time.deltaTime;
+        rb.velocity = direction.normalized * ballMoveSpeed;
     }
 
     private void OnCollisionEnter2D(Collision2D collision) 
