@@ -76,7 +76,7 @@ public class BallMovement : MonoBehaviour
     void playSound()
     {
         audioSource.PlayOneShot(hitsound);
-        audioSource.volume = Random.Range(0.5f, 1f);
+        audioSource.volume = Random.Range(0.125f, 0.2f);
         audioSource.pitch = Random.Range(0.85f, 1f);
     }
     public void ResetDirection()
