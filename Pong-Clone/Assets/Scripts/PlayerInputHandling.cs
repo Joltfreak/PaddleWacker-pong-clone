@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -50,6 +51,7 @@ public class PlayerInputHandling : MonoBehaviour
 
     public void QuitGame()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(0);
         audioSource.PlayOneShot(audioClip);
     }

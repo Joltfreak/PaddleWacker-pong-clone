@@ -12,6 +12,18 @@ EditorBuildSettings:
     path: Assets/Scenes/PlayerVsAiGame_Obstacle.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/PlayerVsPlayerGame.unity
+    path: Assets/Scenes/PlayerVsAiGame_NoObstacle.unity
+    guid: 477d4c094e4e3e8429ca869870f56b3e
+  - enabled: 1
+    path: Assets/Scenes/PlayerVsAiGame_MovingObstacle.unity
+    guid: 614030aa59465334497138c9a614bce9
+  - enabled: 1
+    path: Assets/Scenes/PlayerVsPlayerGame_Obstacle.unity
     guid: a9aeedd3678291d479666b71472d83f0
+  - enabled: 1
+    path: Assets/Scenes/PlayerVsPlayerGame_NoObstacle.unity
+    guid: c0109035d42f1f243921f92d49ab9139
+  - enabled: 1
+    path: Assets/Scenes/PlayerVsPlayerGame_MovingObstacle.unity
+    guid: 13b883685d795ef4692ea24c2ae4fafc
   m_configObjects: {}
